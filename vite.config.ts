@@ -14,13 +14,13 @@ export default defineConfig({
 				"my-remote-app":
 					"https://sample-remote-app.netlify.app/assets/remoteEntry.js",
 			},
-			shared: ["vue", "tailwindcss"],
+			shared: ["vue"],
 		}),
 	],
 	build: {
 		target: "esnext", // Changed from ES2020 to ES2022 to support top-level await
 		minify: false,
-		// cssCodeSplit: false,
+        cssCodeSplit: true,
 		cssMinify: false,
 		outDir: "dist",
 	},
