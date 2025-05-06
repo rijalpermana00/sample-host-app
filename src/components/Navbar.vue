@@ -10,8 +10,8 @@
     const navLinks = ref<NavLink[]>([
         { name: 'Home', path: '/', active: true },
         { name: 'Dashboard', path: '/dashboard', active: false },
-        { name: 'Callendar', path: '/calendar', active: false },
-        { name: 'Pegadaian', path: '/pegadaian', active: false },
+        { name: 'Calendar', path: '/calendar', active: false },
+        { name: 'Top Up', path: '/top-up', active: false },
     ]);
 </script>
   
@@ -26,13 +26,13 @@
           </div>
           <span class="font-bold text-xl text-gray-800 flex items-center">
             <span>HCMS</span>
-            <span class="text-gray-300 mx-2 hidden sm:block">|</span>
-            <span class="hidden sm:block text-base font-normal text-gray-500">Human Capital Management System</span>
+            <span class="text-gray-300 mx-2 sm:block">|</span>
+            <span class="sm:block text-base font-normal text-gray-500">Human Capital Management System</span>
           </span>
         </div>
   
         <!-- Navigation Links -->
-        <div class="hidden md:flex space-x-8">
+        <div class="md:flex space-x-8">
           <router-link 
             v-for="(link, index) in navLinks" 
             :key="index" 
