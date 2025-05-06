@@ -14,7 +14,7 @@ export default defineConfig({
             name: 'my-host-app',
             remotes: {
                 // "my-remote-app": "http://localhost:5174/assets/remoteEntry.js",
-                "my-remote-app": "https://sample-remote-app.netlify.app/assets/remoteEntry.js"
+                "my-remote-app": "https://sample-remote-app.netlify.app/assets/remoteentry.js"
             },
             shared: ['vue']
         })
