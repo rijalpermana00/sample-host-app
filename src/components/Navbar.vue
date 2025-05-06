@@ -1,3 +1,20 @@
+<script setup lang="ts">
+    import { defineComponent, ref } from 'vue'
+    
+    interface NavLink {
+        name: string;
+        path: string;
+        active: boolean;
+    }
+    
+    const navLinks = ref<NavLink[]>([
+        { name: 'Home', path: '/', active: true },
+        { name: 'Dashboard', path: '/dashboard', active: false },
+        { name: 'Callendar', path: '/calendar', active: false },
+        { name: 'Pegadaian', path: '/pegadaian', active: false },
+    ]);
+</script>
+  
 <template>
     <nav class="bg-white rounded-full shadow-md py-2 px-4 md:px-8 fixed w-full max-w-7xl mx-auto top-4 z-50">
       <div class="flex items-center justify-between">
@@ -41,29 +58,3 @@
       </div>
     </nav>
   </template>
-  
-  <script lang="ts">
-  import { defineComponent, ref } from 'vue'
-  
-  interface NavLink {
-    name: string;
-    path: string;
-    active: boolean;
-  }
-  
-  export default defineComponent({
-    name: 'Navbar',
-    setup() {
-      const navLinks = ref<NavLink[]>([
-        { name: 'Home', path: '/', active: true },
-        { name: 'Dashboard', path: '/dashboard', active: false },
-        { name: 'Callendar', path: '/calendar', active: false },
-        { name: 'Pegadaian', path: '/pegadaian', active: false },
-      ]);
-  
-      return {
-        navLinks
-      }
-    }
-  })
-  </script>

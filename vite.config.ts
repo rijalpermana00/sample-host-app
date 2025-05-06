@@ -12,9 +12,10 @@ export default defineConfig({
         tailwindcss(),
         federation({
             name: 'my-host-app',
-            // remotes: {
-            //     remote_app: "http://localhost:5001/assets/remoteEntry.js",
-            // },
+            remotes: {
+                // "my-remote-app": "http://localhost:5174/assets/remoteEntry.js",
+                "my-remote-app": "https://sample-remote-app.netlify.app/assets/remoteEntry.js"
+            },
             shared: ['vue']
         })
     ],
