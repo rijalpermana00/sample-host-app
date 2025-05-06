@@ -52,7 +52,7 @@
   }
   
   export default defineComponent({
-    name: 'NavBar',
+    name: 'Navbar',
     setup() {
       const navLinks = ref<NavLink[]>([
         { name: 'Home', path: '/', active: true },
