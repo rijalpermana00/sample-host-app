@@ -20,8 +20,7 @@ export default defineConfig({
 	build: {
 		target: "esnext", // Changed from ES2020 to ES2022 to support top-level await
 		minify: false,
-        cssCodeSplit: true,
+        cssCodeSplit: false,
 		cssMinify: false,
-		outDir: "dist",
 	},
 })
