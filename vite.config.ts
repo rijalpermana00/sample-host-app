@@ -4,9 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 import federation from "@originjs/vite-plugin-federation";
 
 export default defineConfig({
-    build:{
-        "target": "esnext",  // Changed from ES2020 to ES2022 to support top-level await
-    },
     plugins: [
         vue(),
         tailwindcss(),
@@ -16,15 +13,10 @@ export default defineConfig({
                 // "my-remote-app": "http://localhost:5174/assets/remoteEntry.js",
                 "my-remote-app": "https://sample-remote-app.netlify.app/assets/remoteentry.js"
             },
-            shared: ['vue']
+            shared: ['vue', 'tailwindcss']
         })
     ],
-    server: {
-        cors: {
-          origin: '*', // Allow all origins (not recommended for production)
-          methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-          credentials: true,
-          allowedHeaders: 'Content-Type, Authorization',
-        },
+    build:{
+        "target": "esnext",  // Changed from ES2020 to ES2022 to support top-level await
     },
 })
