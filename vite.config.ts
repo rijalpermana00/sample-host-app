@@ -21,7 +21,7 @@ export default defineConfig({
     ],
     server: {
         cors: {
-          origin: ['https://sample-remote-app.netlify.app'], // Allow all origins (not recommended for production)
+          origin: '*', // Allow all origins (not recommended for production)
           methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
           credentials: true,
           allowedHeaders: 'Content-Type, Authorization',
